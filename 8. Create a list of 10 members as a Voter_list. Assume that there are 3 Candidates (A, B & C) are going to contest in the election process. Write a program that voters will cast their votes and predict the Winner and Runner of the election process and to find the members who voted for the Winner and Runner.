@@ -1,0 +1,13 @@
+import random
+voter_list = ["Voter " + str(i) for i in range(1, 11)]
+votes = {voter: random.choice(["A", "B", "C"]) for voter in voter_list}
+vote_count = {candidate: sum(1 for vote in votes.values() if vote == candidate) for candidate in ["A", "B", "C"]}
+sorted_votes = sorted(vote_count.items(), key=lambda x: x[1], reverse=True)
+winner, runner_up = sorted_votes[0][0], sorted_votes[1][0]
+winner_voters = [voter for voter, vote in votes.items() if vote == winner]
+runner_up_voters = [voter for voter, vote in votes.items() if vote == runner_up]
+
+print("Winner:", winner)
+print("Runner-up:", runner_up)
+print("Voters who voted for the winner:", winner_voters)
+print("Voters who voted for the runner-up:", runner_up_voters)
