@@ -1,0 +1,19 @@
+n=[23,41,56,78,12,90]
+fl=0
+sl=0
+fs=n[0]
+ss=n[0]
+for i in range(len(n)):
+   if fl<n[i]:
+     fl=n[i]
+   elif fs>n[i]:
+     fs=n[i]
+for i in range(len(n)):
+   if fl>n[i] and sl<n[i]:
+     sl=n[i]
+   elif fs<n[i] and ss>n[i]:
+      ss=n[i]
+print("First Largest = ",fl)
+print("Second Largest = ",sl)
+print("First Smallest = ",fs)
+print("Second Smallest = ",ss)
