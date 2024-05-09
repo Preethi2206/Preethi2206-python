@@ -1,0 +1,15 @@
+n=[5,3,7,9,8,4,2]
+for i in range(len(n)):
+   for j in range(len(n)):
+    if n[i]<n[j]:
+      temp=n[i]
+      n[i]=n[j]
+      n[j]=temp
+print("Ascending order = ",n)
+for i in range(len(n)):
+  for j in range(len(n)):
+    if n[i]>n[j]:
+      temp=n[i]
+      n[i]=n[j]
+      n[j]=temp
+print("Descending order = ",n)
