@@ -1,0 +1,12 @@
+def sort_zeros_and_ones(input_list):
+    input_list.sort()
+    return input_list
+
+
+def main():
+    input_list = [0,1,0,1,1,0,1,0,1,0]
+    sorted_list = sort_zeros_and_ones(input_list)
+    print("Output:", sorted_list)
+
+if __name__ == "__main__":
+    main()
