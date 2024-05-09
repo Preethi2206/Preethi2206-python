@@ -1,0 +1,10 @@
+n=[3,5,7,9,6,4]
+l=0
+s=n[0]
+for i in range(len(n)):
+   if (l<n[i]):
+     l=n[i]
+   elif (s>n[i]):
+    s=n[i]
+print("Largest = ",l)
+print("Smallest= ",s)
