@@ -1,0 +1,7 @@
+def remove_duplicates(names_list):
+    unique_names = []
+    for name in names_list:
+        if name not in unique_names:
+            unique_names.append(name)
+    return unique_names
+
