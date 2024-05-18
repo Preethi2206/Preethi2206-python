@@ -1,0 +1,23 @@
+def calculate_growth_rate(data):
+    start_date, start_value = data[0]
+    end_date, end_value = data[-1]
+    growth_rate = (end_value - start_value) / start_value * 100
+    return growth_rate
+instrument1_data = [("2023-01-01", 100), ("2023-06-01", 120), ("2024-01-01", 150)]
+instrument2_data = [("2023-01-01", 200), ("2023-06-01", 180), ("2024-01-01", 220)]
+instrument3_data = [("2023-01-01", 150), ("2023-06-01", 160), ("2024-01-01", 170)]
+all_instruments_data = [("Instrument 1", instrument1_data), ("Instrument 2", instrument2_data), ("Instrument 3", instrument3_data)]
+start_date = input("Enter start date (YYYY-MM-DD): ")
+end_date = input("Enter end date (YYYY-MM-DD): ")
+
+highest_growth_instrument = None
+highest_growth_rate = float('-inf')
+for instrument_name, instrument_data in all_instruments_data:
+    filtered_data = [data for data in instrument_data if start_date <= data[0] <= end_date]
+    if len(filtered_data) < 2:
+        continue
+    growth_rate = calculate_growth_rate(filtered_data)
+    if growth_rate > highest_growth_rate:
+        highest_growth_rate = growth_rate
+        highest_growth_instrument = instrument_name
+print(f"The instrument with the highest growth rate from {start_date} to {end_date} is {highest_growth_instrument} with a growth rate of {highest_growth_rate:.2f}%.")
