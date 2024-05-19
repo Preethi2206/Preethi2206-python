@@ -1,0 +1,17 @@
+def atm_transaction(balance, withdrawal_amount):
+    if balance >= withdrawal_amount:
+        balance -= withdrawal_amount
+        return True, balance
+    else:
+        return False, balance
+test_cases = [(1000, 500), (200, 300), (1500, 1500)]
+expected_outputs = ["Transaction successful", "Insufficient funds", "Transaction successful"]
+
+for i, (balance, withdrawal_amount) in enumerate(test_cases):
+    success, remaining_balance = atm_transaction(balance, withdrawal_amount)
+    if success:
+        output = "Transaction successful"
+    else:
+        output = "Insufficient funds"
+    expected_output = expected_outputs[i]
+    print(f"Test Case {i+1}: Account balance: ${balance}, Withdrawal amount: ${withdrawal_amount}. Expected output: {expected_output}. Actual output: {output}.")
