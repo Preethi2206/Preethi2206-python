@@ -1,0 +1,8 @@
+def recommend_movies(preferences):
+    recommended_movies = []
+    for genre, movies in preferences.items():
+        recommended_movies.extend(movies)
+    return recommended_movies
+preferences = {'Action': ['The Dark Knight', 'Inception'], 'Comedy': ['The Hangover', 'Superbad']}
+recommended_movies = recommend_movies(preferences)
+print("Recommended Movies:", recommended_movies)
