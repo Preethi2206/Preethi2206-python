@@ -1,0 +1,13 @@
+def dict_of_lists_to_list_of_dicts(dict_of_lists):
+    keys = dict_of_lists.keys()
+    values = zip(*dict_of_lists.values())
+    list_of_dicts = [dict(zip(keys, v)) for v in values]
+
+    return list_of_dicts
+dict_of_lists = {
+    'name': ['Alice', 'Bob', 'Charlie'],
+    'age': [25, 30, 35],
+    'city': ['New York', 'Los Angeles', 'Chicago']
+}
+list_of_dicts = dict_of_lists_to_list_of_dicts(dict_of_lists)
+print(list_of_dicts)
