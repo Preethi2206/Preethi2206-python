@@ -1,0 +1,31 @@
+import math
+
+def calculate_roots(a, b, c):
+    discriminant = b**2 - 4*a*c
+    
+    if discriminant > 0:
+        root1 = (-b + math.sqrt(discriminant)) / (2*a)
+        root2 = (-b - math.sqrt(discriminant)) / (2*a)
+        return root1, root2
+    elif discriminant == 0:
+        root = -b / (2*a)
+        return root, root
+    else:
+        real_part = -b / (2*a)
+        imaginary_part = math.sqrt(abs(discriminant)) / (2*a)
+        return complex(real_part, imaginary_part), complex(real_part, -imaginary_part)
+
+def main():
+    a = float(input("Enter coefficient a: "))
+    b = float(input("Enter coefficient b: "))
+    c = float(input("Enter coefficient c: "))
+    
+    root1, root2 = calculate_roots(a, b, c)
+    
+    print("Roots:", root1, ",", root2)
+print("Test Case 1:")
+main()
+print("Test Case 2:")
+main()
+print("Test Case 3:")
+main()
