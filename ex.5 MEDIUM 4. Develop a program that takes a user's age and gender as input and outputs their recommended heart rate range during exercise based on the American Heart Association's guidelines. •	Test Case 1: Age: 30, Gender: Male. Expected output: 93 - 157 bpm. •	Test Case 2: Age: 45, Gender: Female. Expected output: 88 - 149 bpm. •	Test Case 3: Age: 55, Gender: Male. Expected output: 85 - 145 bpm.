@@ -1,0 +1,26 @@
+def calculate_heart_rate_range(age, gender):
+    if gender.lower() == 'male':
+        max_heart_rate = 220 - age
+    elif gender.lower() == 'female':
+        max_heart_rate = 226 - age
+    else:
+        return "Invalid gender input."
+    
+    lower_limit = 0.5 * max_heart_rate
+    upper_limit = 0.85 * max_heart_rate
+    
+    return int(lower_limit), int(upper_limit)
+
+def main():
+    age = int(input("Enter your age: "))
+    gender = input("Enter your gender (Male/Female): ")
+    
+    lower_limit, upper_limit = calculate_heart_rate_range(age, gender)
+    
+    print("Recommended heart rate range during exercise:", lower_limit, "-", upper_limit, "bpm")
+print("Test Case 1:")
+main()
+print("Test Case 2:")
+main()
+print("Test Case 3:")
+main()
