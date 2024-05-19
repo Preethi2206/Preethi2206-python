@@ -1,0 +1,8 @@
+import string
+def is_pangram(input_string):
+    input_string = input_string.lower()
+    unique_chars = set(input_string)
+    unique_chars.difference_update(string.ascii_lowercase)
+    return len(unique_chars) == 0
+input_string = "The quick brown fox jumps over the lazy dog"
+print(is_pangram(input_string))  # Output: True
