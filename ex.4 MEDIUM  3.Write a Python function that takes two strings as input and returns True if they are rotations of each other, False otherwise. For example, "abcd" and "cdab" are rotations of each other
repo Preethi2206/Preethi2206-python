@@ -1,0 +1,11 @@
+def are_rotations(string1, string2):
+    if len(string1) != len(string2):
+        return False
+    concatenated_string = string1 + string1
+    if string2 in concatenated_string:
+        return True
+    else:
+        return False
+string1 = "abcd"
+string2 = "cdab"
+print(are_rotations(string1, string2))  # Output: True
