@@ -1,0 +1,9 @@
+def update_dictionary_value(dictionary, key, new_value):
+    if key in dictionary:
+        dictionary[key] = new_value
+        print("Value of key '{}' updated to '{}'.".format(key, new_value))
+    else:
+        print("Key '{}' not found in the dictionary.".format(key))
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+update_dictionary_value(my_dict, 'b', 5)
+print("Updated dictionary:", my_dict)
