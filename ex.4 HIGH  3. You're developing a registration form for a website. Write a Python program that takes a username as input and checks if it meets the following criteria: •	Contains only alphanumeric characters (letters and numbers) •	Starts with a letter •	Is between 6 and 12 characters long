@@ -1,0 +1,13 @@
+def check_username(username):
+    if not username.isalnum():
+        return False
+    if not username[0].isalpha():
+        return False
+    if not 6 <= len(username) <= 12:
+        return False
+    return True
+username = input("Enter your username: ")
+if check_username(username):
+    print("Username is valid.")
+else:
+    print("Username is invalid.")
