@@ -1,0 +1,9 @@
+def count_word_frequency(text):
+    words = text.split()
+    word_frequency = {}
+    for word in words:
+        word_frequency[word] = word_frequency.get(word, 0) + 1
+    return word_frequency
+sample_text = "This is a sample text. This text contains sample words."
+word_frequency = count_word_frequency(sample_text)
+print("Word Frequency:", word_frequency)
