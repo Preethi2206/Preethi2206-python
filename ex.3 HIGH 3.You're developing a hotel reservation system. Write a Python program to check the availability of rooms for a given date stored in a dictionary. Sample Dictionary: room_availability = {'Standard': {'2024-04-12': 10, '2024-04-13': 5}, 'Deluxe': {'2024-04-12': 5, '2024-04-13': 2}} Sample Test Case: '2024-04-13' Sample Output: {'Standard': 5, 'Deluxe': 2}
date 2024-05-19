@@ -1,0 +1,16 @@
+def check_room_availability(date, room_availability):
+    availability = {}
+    for room_type, availability_by_date in room_availability.items():
+        if date in availability_by_date:
+            availability[room_type] = availability_by_date[date]
+        else:
+            availability[room_type] = 0
+    return availability
+
+room_availability = {
+    'Standard': {'2024-04-12': 10, '2024-04-13': 5},
+    'Deluxe': {'2024-04-12': 5, '2024-04-13': 2}
+}
+
+date = '2024-04-13'
+print(check_room_availability(date, room_availability))
