@@ -1,0 +1,12 @@
+def create_nested_dictionary(keys, values):
+    if len(keys) != len(values):
+        raise ValueError("Lengths of keys and values lists must be equal")
+    result_dict = {}
+    for i in range(len(keys)):
+        result_dict[keys[i]] = values[i]
+    return result_dict
+keys_list = ['key1', 'key2', 'key3']
+values_list = [{'nested_key1': 'value1'}, {'nested_key2': 'value2'}, {'nested_key3': 'value3'}]
+result_dictionary = create_nested_dictionary(keys_list, values_list)
+
+print(result_dictionary)
