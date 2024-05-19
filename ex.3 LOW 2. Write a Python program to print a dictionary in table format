@@ -1,0 +1,7 @@
+from tabulate import tabulate
+
+def print_dict_as_table(dictionary):
+    table = [[key, value] for key, value in dictionary.items()]
+    print(tabulate(table, headers=["Key", "Value"], tablefmt="grid"))
+my_dict = {"A": 1, "B": 2, "C": 3, "D": 4, "E": 5}
+print_dict_as_table(my_dict)
