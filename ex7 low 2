@@ -1,0 +1,12 @@
+def show_employee(name, salary=9000):
+    print(f"Employee Name: {name}")
+    print(f"Employee Salary: {salary}")
+
+
+def func1(*args):
+    print("Variable number of arguments:")
+    for arg in args:
+        print(arg)
+show_employee("Alice", 10000)
+show_employee("Bob")
+func1(1, 2, 3, 4, 5)
