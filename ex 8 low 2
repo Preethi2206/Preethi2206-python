@@ -1,0 +1,27 @@
+def usd_to_eur(usd_amount):
+    return usd_amount * 0.82
+
+def eur_to_usd(eur_amount):
+    return eur_amount / 0.82
+
+def usd_to_gbp(usd_amount):
+    return usd_amount * 0.72
+
+def gbp_to_usd(gbp_amount):
+    return gbp_amount / 0.72
+
+def eur_to_gbp(eur_amount):
+    return eur_amount * 0.88
+
+def gbp_to_eur(gbp_amount):
+    return gbp_amount / 0.88
+import currency_converter as cc
+usd_amount = 100
+eur_amount = cc.usd_to_eur(usd_amount)
+print(f"${usd_amount} is €{eur_amount:.2f}")
+eur_amount = 50
+gbp_amount = cc.eur_to_gbp(eur_amount)
+print(f"€{eur_amount} is £{gbp_amount:.2f}")
+gbp_amount = 75
+usd_amount = cc.gbp_to_usd(gbp_amount)
+print(f"£{gbp_amount} is ${usd_amount:.2f}")
