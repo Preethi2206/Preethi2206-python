@@ -1,0 +1,13 @@
+def get_integer_input():
+    while True:
+        try:
+            value = input("Enter an integer: ")
+            integer_value = int(value)
+            return integer_value
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
+try:
+    integer_input = get_integer_input()
+    print(f"You entered: {integer_input}")
+except ValueError:
+    print("An error occurred. Please try again.")
