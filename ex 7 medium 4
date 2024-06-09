@@ -1,0 +1,6 @@
+def student_info(name, **kwargs):
+    info = f"Student Name: {name}"
+    for key, value in kwargs.items():
+        info += f"\n{key.capitalize()}: {value}"
+    print(info)
+student_info("Alice", age=15, grade=10, school="XYZ High School")
