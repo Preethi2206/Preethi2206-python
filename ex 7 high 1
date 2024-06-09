@@ -1,0 +1,21 @@
+def count_departments(departments):
+    total = 1 
+    for sub_department in departments.values():
+        if sub_department:
+            total += count_departments(sub_department)
+    return total
+org_chart = {
+    'A': {
+        'A1': {},
+        'A2': {
+            'A2.1': {},
+            'A2.2': {}
+        }
+    },
+    'B': {
+        'B1': {},
+        'B2': {}
+    }
+}
+
+print("Total departments:", count_departments(org_chart))
