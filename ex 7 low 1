@@ -1,0 +1,5 @@
+def func1(*args):
+    print("Values of the arguments:")
+    for arg in args:
+        print(arg)
+func1(1, 2, 3, "Hello", [4, 5, 6])
