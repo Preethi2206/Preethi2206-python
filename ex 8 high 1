@@ -1,0 +1,12 @@
+def decimal_to_binary(decimal):
+    return bin(decimal)[2:]
+
+def binary_to_decimal(binary):
+    return int(binary, 2)
+import binary_converter as bc
+decimal_number = 10
+binary_number = bc.decimal_to_binary(decimal_number)
+print(f"Decimal {decimal_number} is binary {binary_number}")
+binary_number = "1010"
+decimal_number = bc.binary_to_decimal(binary_number)
+print(f"Binary {binary_number} is decimal {decimal_number}")
