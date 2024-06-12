@@ -1,0 +1,16 @@
+class NegativeNumberError(Exception):
+    """Exception raised for encountering a negative number in a list."""
+    def __init__(self, number):
+        self.number = number
+        self.message = f"Negative number encountered: {number}"
+        super().__init__(self.message)
+def check_for_negative_numbers(numbers):
+    for number in numbers:
+        if number < 0:
+            raise NegativeNumberError(number)
+    print("All numbers are non-negative.")
+numbers = [1, 2, -3, 4, 5]
+try:
+    check_for_negative_numbers(numbers)
+except NegativeNumberError as e:
+    print(e)
