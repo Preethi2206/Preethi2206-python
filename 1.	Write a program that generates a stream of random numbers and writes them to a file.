@@ -1,0 +1,12 @@
+import random
+
+def generate_random_numbers(file_path, num_numbers, lower_bound, upper_bound):
+    with open(file_path, 'w') as file:
+        for _ in range(num_numbers):
+            random_number = random.randint(lower_bound, upper_bound)
+            file.write(f"{random_number}\n")
+file_path = 'random_numbers.txt'  # File to write the random numbers
+num_numbers = 100 
+lower_bound = 1  
+upper_bound = 100 
+generate_random_numbers(file_path, num_numbers, lower_bound, upper_bound)
