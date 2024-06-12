@@ -1,0 +1,7 @@
+import numpy as np
+array = np.array([5, 2, 9, 1, 5, 6])
+print("Original array:")
+print(array)
+sorted_array = np.sort(array)
+print("\nSorted array:")
+print(sorted_array)
