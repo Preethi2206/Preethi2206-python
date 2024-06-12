@@ -1,0 +1,20 @@
+def append_to_file(file_path, data):
+    with open(file_path, 'a') as file:
+        file.write(data)
+def read_file(file_path):
+    try:
+        with open(file_path, 'r') as file:
+            content = file.read()
+            return content
+    except FileNotFoundError:
+        print(f"The file '{file_path}' does not exist.")
+        return None
+file_path = 'example_file.txt'  
+new_data = "\nThis is new data being appended to the file."
+append_to_file(file_path, new_data)
+updated_content = read_file(file_path)
+if updated_content is not None:
+    print("Updated file content:")
+    print(updated_content)
+else:
+    print("No content to display.")
